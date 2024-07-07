@@ -42,10 +42,10 @@ jobs:
     strategy:
       matrix:
         repo_info:
-          - {repo_url: "https://github.com/openwrt/openwrt", kernel_version: "6.1", branch: "master"}
-          - {repo_url: "https://github.com/openwrt/openwrt", kernel_version: "6.6", branch: "master"}
+          # - {repo_url: "https://github.com/openwrt/openwrt", kernel_version: "6.1", branch: "master"}
+          # - {repo_url: "https://github.com/openwrt/openwrt", kernel_version: "6.6", branch: "master"}
           - {repo_url: "https://github.com/immortalwrt/immortalwrt", kernel_version: "6.1", branch: "master"}
-          - {repo_url: "https://github.com/immortalwrt/immortalwrt", kernel_version: "6.6", branch: "master"}
+          # - {repo_url: "https://github.com/immortalwrt/immortalwrt", kernel_version: "6.6", branch: "master"}
 
     steps: 
     - name: 释放磁盘空间
