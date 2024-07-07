@@ -7,7 +7,7 @@ on:
       OP_IP:
         description: '静态IP（输入dhcp开启dhcp）'     
         required: false
-        default: '192.168.2.2' 
+        default: '192.168.254.254' 
         type: string
 
       OP_rootfs:
@@ -25,7 +25,7 @@ on:
       CUSTOM_PLUGINS:
         description: '自定义插件名称，用逗号分隔'
         required: false
-        default: 'luci-app-dockerman,luci-app-mosdns,luci-theme-argon,luci-app-ttyd,luci-app-diskman,luci-app-hd-idle,luci-app-homeproxy,luci-app-samba4,luci-app-adguardhome,luci-app-emby,luci-app-openclash,luci-app-usb-printer'
+        default: 'luci-theme-argon,luci-app-ttyd,luci-app-diskman,luci-app-hd-idle,luci-app-homeproxy,luci-app-samba4,luci-app-adguardhome,luci-app-openclash'
         type: string
 
 env:
@@ -156,7 +156,10 @@ jobs:
         CONFIG_PACKAGE_autosamba=y
         CONFIG_PACKAGE_kmod-usb-net-rndis=y
         CONFIG_PACKAGE_kmod-usb-net=y
+        CONFIG_PACKAGE_kmod-usb-net-asix=y
+        CONFIG_PACKAGE_kmod-usb-net-asix-ax88179=y
         CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
+
         CONFIG_PACKAGE_zram-swap=y
         EOF
         
