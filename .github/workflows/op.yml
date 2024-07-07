@@ -146,6 +146,8 @@ jobs:
         CONFIG_PACKAGE_dnsmasq-full=y
         CONFIG_PACKAGE_luci-app-firewall=y
         CONFIG_PACKAGE_bash=y
+        CONFIG_PACKAGE_wpad-mini=n
+        CONFIG_PACKAGE_wpad=y
         CONFIG_PACKAGE_kmod-nft-socket=y
         CONFIG_PACKAGE_fuse-utils=y
         CONFIG_PACKAGE_luci-app-opkg=y
